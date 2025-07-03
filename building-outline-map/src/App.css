@@ -1,0 +1,22 @@
+/* 전체 페이지가 화면에 꽉 차게 */
+.App {
+  text-align: center;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+/* 헤더 스타일 */
+.App-header {
+  background-color: #282c34;
+  color: white;
+  padding: 20px;
+  font-size: calc(10px + 2vmin);
+  font-family: sans-serif;
+}
+
+/* 지도 컨테이너 스타일 */
+.leaflet-container {
+  height: 100vh;
+  width: 100%;
+}
