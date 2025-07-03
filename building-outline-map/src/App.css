@@ -1,22 +1,72 @@
-/* 전체 페이지가 화면에 꽉 차게 */
-.App {
-  text-align: center;
+/* 전체 화면 기본 세팅 */
+html, body, #root {
   height: 100%;
+  width: 100%;
   margin: 0;
   padding: 0;
+  overflow: hidden;
 }
 
-/* 헤더 스타일 */
-.App-header {
-  background-color: #282c34;
-  color: white;
-  padding: 20px;
-  font-size: calc(10px + 2vmin);
-  font-family: sans-serif;
-}
-
-/* 지도 컨테이너 스타일 */
-.leaflet-container {
-  height: 100vh;
+/* 전체 앱 컨테이너 */
+.App {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
   width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+/* 네비게이션 바 */
+nav {
+  background-color: #333;
+  color: white;
+  padding: 10px 20px;
+  text-align: center;
+  z-index: 20;
+}
+
+/* 메인 레이아웃 (사이드바 + 지도) */
+.main-layout {
+  display: flex;
+  flex: 1;
+  overflow: hidden;
+}
+
+/* 사이드바 */
+.sidebar {
+  width: 270px;
+  background-color: rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  height: 100%;
+  box-shadow: 2px 0px 5px rgba(0, 0, 0, 0.2);
+  overflow-y: auto;
+  flex-shrink: 0; /* 고정 너비 유지 */
+}
+
+/* 검색 입력창 */
+.search-input {
+  width: 100%;
+  padding: 6px 10px;
+  margin-bottom: 12px;
+  font-size: 14px;
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+/* 지도 영역 */
+.map-container {
+  flex-grow: 1;
+  height: 100%;
+  overflow: hidden;
+}
+
+/* 푸터 */
+footer {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 10px 20px;
+  z-index: 20;
 }
