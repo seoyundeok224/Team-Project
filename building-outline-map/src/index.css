@@ -11,7 +11,3 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
-
-.leaflet-container {
-  background: #fff !important; /* 지도 바깥 회색을 흰색으로 */
-}
