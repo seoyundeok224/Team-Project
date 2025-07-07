@@ -59,26 +59,7 @@ const Sidebar = ({
         {darkMode ? '💡 라이트 모드' : '🌙 다크 모드'}
       </button>
 
-      {/* 📁 GeoJSON 파일 업로드 */}
-      <h3>GeoJSON</h3>
-      <input
-        type="file"
-        accept=".geojson,application/json" // GeoJSON 파일만 허용
-        onChange={e => {
-          const file = e.target.files[0];  // 선택한 파일
-          const reader = new FileReader(); // 파일 읽기 객체
-          reader.onload = () => setGeoData(JSON.parse(reader.result)); // 읽은 결과를 JSON으로 파싱 후 저장
-          reader.readAsText(file); // 텍스트로 읽기 시작
-        }}
-      />
-
-      {/* 🔐 로그인/로그아웃 */}
-      <h3>로그인</h3>
-      {user
-        ? <button onClick={() => setUser(null)}>로그아웃</button>
-        : <button onClick={() => setUser({ name: '테스트 사용자' })}>로그인</button>
-      }
-
+      <h3>초기화</h3>
       {/* 🔄 초기화 (전체 페이지 새로고침) */}
       <button onClick={() => window.location.reload()}>🔄 초기화</button>
     </div>

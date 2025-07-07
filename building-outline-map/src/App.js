@@ -16,15 +16,12 @@ function App() {
   const [searchQuery, setSearchQuery] = useState('');          // 검색어 (위치 검색)
 
   return (
-    // 전체 앱 컨테이너, 다크 모드일 경우 'dark' 클래스 포함
     <div className={`App ${darkMode ? 'dark' : ''}`}>
-
       {/* 상단 네비게이션 바 */}
       <Navbar darkMode={darkMode} />
 
       {/* 메인 콘텐츠 영역: 사이드바 + 지도 */}
       <div className="main-layout">
-        
         {/* 사이드 메뉴 패널: 각종 설정 조작 */}
         <Sidebar
           showEmoji={showEmoji}
